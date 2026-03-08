@@ -1,7 +1,5 @@
 # Production Schedule Reflow Engine
 
-Backend take-home challenge for **Naologic – Backend Engineer Role**
-
 This project implements a **production schedule reflow engine** for a manufacturing facility.  
 When disruptions occur (delays, machine maintenance, shift boundaries), the system recomputes a valid production schedule while respecting operational constraints.
 
