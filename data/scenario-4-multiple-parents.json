@@ -1,0 +1,90 @@
+{
+  "workCenters": [
+    {
+      "docId": "wc-1",
+      "docType": "workCenter",
+      "data": {
+        "name": "Extrusion Line 1",
+        "shifts": [
+          { "dayOfWeek": 1, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 2, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 3, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 4, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 5, "startHour": 8, "endHour": 17 }
+        ],
+        "maintenanceWindows": []
+      }
+    },
+    {
+      "docId": "wc-2",
+      "docType": "workCenter",
+      "data": {
+        "name": "Extrusion Line 2",
+        "shifts": [
+          { "dayOfWeek": 1, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 2, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 3, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 4, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 5, "startHour": 8, "endHour": 17 }
+        ],
+        "maintenanceWindows": []
+      }
+    }
+  ],
+  "manufacturingOrders": [
+    {
+      "docId": "mo-4",
+      "docType": "manufacturingOrder",
+      "data": {
+        "manufacturingOrderNumber": "MO-400",
+        "itemId": "pipe-250mm",
+        "quantity": 800,
+        "dueDate": "2026-03-13T17:00:00Z"
+      }
+    }
+  ],
+  "workOrders": [
+    {
+      "docId": "wo-6",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-6",
+        "manufacturingOrderId": "mo-4",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-05T08:00:00Z",
+        "endDate": "2026-03-05T10:00:00Z",
+        "durationMinutes": 180,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": []
+      }
+    },
+    {
+      "docId": "wo-7",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-7",
+        "manufacturingOrderId": "mo-4",
+        "workCenterId": "wc-2",
+        "startDate": "2026-03-05T08:00:00Z",
+        "endDate": "2026-03-05T10:00:00Z",
+        "durationMinutes": 120,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": []
+      }
+    },
+    {
+      "docId": "wo-8",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-8",
+        "manufacturingOrderId": "mo-4",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-05T10:00:00Z",
+        "endDate": "2026-03-05T11:00:00Z",
+        "durationMinutes": 60,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": ["wo-6", "wo-7"]
+      }
+    }
+  ]
+}

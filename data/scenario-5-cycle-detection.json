@@ -1,0 +1,75 @@
+{
+  "workCenters": [
+    {
+      "docId": "wc-1",
+      "docType": "workCenter",
+      "data": {
+        "name": "Extrusion Line 1",
+        "shifts": [
+          { "dayOfWeek": 1, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 2, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 3, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 4, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 5, "startHour": 8, "endHour": 17 }
+        ],
+        "maintenanceWindows": []
+      }
+    }
+  ],
+  "manufacturingOrders": [
+    {
+      "docId": "mo-5",
+      "docType": "manufacturingOrder",
+      "data": {
+        "manufacturingOrderNumber": "MO-500",
+        "itemId": "pipe-300mm",
+        "quantity": 300,
+        "dueDate": "2026-03-14T17:00:00Z"
+      }
+    }
+  ],
+  "workOrders": [
+    {
+      "docId": "wo-9",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-9",
+        "manufacturingOrderId": "mo-5",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-06T08:00:00Z",
+        "endDate": "2026-03-06T09:00:00Z",
+        "durationMinutes": 60,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": ["wo-11"]
+      }
+    },
+    {
+      "docId": "wo-10",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-10",
+        "manufacturingOrderId": "mo-5",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-06T09:00:00Z",
+        "endDate": "2026-03-06T10:00:00Z",
+        "durationMinutes": 60,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": ["wo-9"]
+      }
+    },
+    {
+      "docId": "wo-11",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-11",
+        "manufacturingOrderId": "mo-5",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-06T10:00:00Z",
+        "endDate": "2026-03-06T11:00:00Z",
+        "durationMinutes": 60,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": ["wo-10"]
+      }
+    }
+  ]
+}

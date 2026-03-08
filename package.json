@@ -1,0 +1,28 @@
+{
+  "name": "production-schedule-reflow",
+  "version": "1.0.0",
+  "description": "Naologic backend take-home: production schedule reflow",
+  "main": "dist/index.js",
+ "scripts": {
+  "build": "tsc",
+  "dev": "tsx src/index.ts",
+  "start": "node dist/index.js",
+  "test": "vitest run",
+  "test:watch": "vitest",
+  "generate:large": "tsx src/fixtures/generate-large-scenario.ts",
+  "run:large": "tsx src/run-large-scenario.ts"
+},
+  "keywords": [],
+  "author": "Ruthu Rao",
+  "license": "MIT",
+  "dependencies": {
+    "luxon": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.7.1",
+    "@types/node": "^25.3.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

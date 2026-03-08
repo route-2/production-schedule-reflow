@@ -1,0 +1,47 @@
+{
+  "workCenters": [
+    {
+      "docId": "wc-1",
+      "docType": "workCenter",
+      "data": {
+        "name": "Extrusion Line 1",
+        "shifts": [
+          { "dayOfWeek": 1, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 2, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 3, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 4, "startHour": 8, "endHour": 17 },
+          { "dayOfWeek": 5, "startHour": 8, "endHour": 17 }
+        ],
+        "maintenanceWindows": []
+      }
+    }
+  ],
+  "manufacturingOrders": [
+    {
+      "docId": "mo-2",
+      "docType": "manufacturingOrder",
+      "data": {
+        "manufacturingOrderNumber": "MO-200",
+        "itemId": "pipe-150mm",
+        "quantity": 600,
+        "dueDate": "2026-03-10T17:00:00Z"
+      }
+    }
+  ],
+  "workOrders": [
+    {
+      "docId": "wo-4",
+      "docType": "workOrder",
+      "data": {
+        "workOrderNumber": "WO-4",
+        "manufacturingOrderId": "mo-2",
+        "workCenterId": "wc-1",
+        "startDate": "2026-03-03T16:00:00Z",
+        "endDate": "2026-03-03T18:00:00Z",
+        "durationMinutes": 120,
+        "isMaintenance": false,
+        "dependsOnWorkOrderIds": []
+      }
+    }
+  ]
+}
