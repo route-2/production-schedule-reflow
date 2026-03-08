@@ -388,9 +388,9 @@ A synthetic dataset generator was used to test scheduler scalability.
 Configuration:
 
 ```
-work centers: 10
+work centers: 50
 manufacturing orders: 250
-work orders: 1000
+work orders: 5000
 ```
 
 Example run:
@@ -461,14 +461,6 @@ Possible extensions:
 
 ---
 
-# Demo
-
-A Loom video walkthrough demonstrates:
-
-- running the scheduler  
-- reviewing scenarios  
-- inspecting execution timelines  
-- explaining algorithm design decisions  
 
 ---
 
